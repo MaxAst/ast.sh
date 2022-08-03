@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             <a
               href="https://twitter.com/MaximilianAst"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
             >
               Twitter
             </a>
