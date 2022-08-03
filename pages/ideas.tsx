@@ -3,20 +3,17 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
-const Home: NextPage = () => {
+const Ideas: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Maximilian Ast</title>
-        <meta
-          name="description"
-          content="Maximilian Ast - Software | Startups | Investing"
-        />
+        <title>Ideas | Maximilian Ast</title>
+        <meta name="description" content="Ideas by Maximilian Ast" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Maximilian Ast</h1>
+        <h1 className={styles.title}>Ideas</h1>
         <p>Working on something new.</p>
         <ul>
           <li>
@@ -44,4 +41,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Ideas;
