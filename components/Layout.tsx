@@ -23,17 +23,17 @@ export default function Layout({ children }: PropsWithChildren) {
           <ul className="flex items-center gap-5 sm:gap-10">
             <li>
               <Link href="/work">
-                <a className="hover:underline font-display">Work</a>
+                <a className="hover:underline font-display text-sm">Work</a>
               </Link>
             </li>
             <li>
               <Link href="/ideas">
-                <a className="hover:underline font-display">Ideas</a>
+                <a className="hover:underline font-display text-sm">Ideas</a>
               </Link>
             </li>
             <li>
               <a
-                className="hover:underline font-display"
+                className="hover:underline font-display text-sm"
                 href="https://twitter.com/MaximilianAst"
                 target="_blank"
                 rel="noreferrer"
