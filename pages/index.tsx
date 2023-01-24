@@ -6,7 +6,7 @@ const Home: NextPage = () => {
     <Layout>
       <p>
         Working on{" "}
-        <a href="https://www.tryloopa.com" className="underline text-[#99a1ed]">
+        <a href="https://www.loopa.so" className="underline text-[#99a1ed]">
           Loopa
         </a>
         . Freelancing as a developer until I can work on Loopa full-time.
