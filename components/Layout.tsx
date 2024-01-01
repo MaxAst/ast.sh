@@ -14,21 +14,25 @@ export default function Layout({ children }: PropsWithChildren) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="flex items-center justify-between mb-8">
-        <Link href="/">
-          <a className="text-2xl sm:text-3xl font-display font-bold">
-            Maximilian Ast
-          </a>
+        <Link href="/" className="text-2xl sm:text-3xl font-display font-bold">
+          Maximilian Ast
         </Link>
         <nav>
           <ul className="flex items-center gap-5 sm:gap-10">
             <li>
-              <Link href="/work">
-                <a className="hover:underline font-display text-sm">Work</a>
+              <Link
+                href="/work"
+                className="hover:underline font-display text-sm"
+              >
+                Work
               </Link>
             </li>
             <li>
-              <Link href="/ideas">
-                <a className="hover:underline font-display text-sm">Ideas</a>
+              <Link
+                href="/ideas"
+                className="hover:underline font-display text-sm"
+              >
+                Ideas
               </Link>
             </li>
             <li>
