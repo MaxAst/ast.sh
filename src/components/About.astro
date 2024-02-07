@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import Max from "../photos/max.png";
+---
+
+<div
+  class="bg-rose-50 py-10 px-2 md:px-0 grid gap-6 md:gap-16 md:grid-cols-3 items-center"
+>
+  <div class="md:pl-10">
+    <Image
+      class="col-span-1 bg-transparent"
+      src={Max}
+      alt="Maximilian Ast - Chief Product Builder at Ast Product Studios"
+    />
+  </div>
+  <div class="col-span-2 max-w-md">
+    <h1 class="font-display font-bold text-4xl mb-3">Meet Max</h1>
+    <h2 class="font-bold md:text-2xl">Chief Product Builder</h2>
+    <p class="font-serif text-base">
+      “I recently read a quote from one of my favorite entrepreneurs, Tobi
+      Lütke: ‘Life is best lived, working hard, solving difficult problems,
+      surrounded by friends’. I love that quote. And I have nothing to add. This
+      is what I want to spend my life doing.”
+    </p>
+  </div>
+</div>

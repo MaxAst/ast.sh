@@ -1,0 +1,20 @@
+---
+import Logo from "./Logo.astro";
+import CtaButton from "./CtaButton.astro";
+---
+
+<nav class="px-2 md:px-0 flex items-center justify-between">
+  <a href="/">
+    <Logo />
+  </a>
+  <div class="hidden md:flex items-center gap-12">
+    <ul class="flex items-center gap-12">
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/consulting">Consulting</a></li>
+    </ul>
+    <a href="/contact">
+      <CtaButton />
+    </a>
+  </div>
+</nav>

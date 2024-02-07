@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+import MrPorter from "../logos/mrp.svg";
+import Otrium from "../logos/otrium.svg";
+import Moia from "../logos/moia.svg";
+import Stryber from "../logos/stryber.svg";
+---
+
+<div
+  class="grid grid-cols-2 gap-y-12 md:grid-cols-4 items-center justify-center place-content-center place-items-center bg-rose-50 py-7"
+>
+  <Image width={150} src={MrPorter} alt="A bird sitting on a nest of eggs." />
+  <Image width={90} src={Otrium} alt="A bird sitting on a nest of eggs." />
+  <Image width={90} src={Moia} alt="A bird sitting on a nest of eggs." />
+  <Image width={110} src={Stryber} alt="A bird sitting on a nest of eggs." />
+</div>
