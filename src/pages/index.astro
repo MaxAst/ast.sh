@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import About from "../components/About.astro";
+import Card from "../components/Card.astro";
+import CardGrid from "../components/CardGrid.astro";
+import Contact from "../components/Contact.astro";
+import CompanyLogos from "../components/CompanyLogos.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <CompanyLogos />
+  <CardGrid>
+    <Card
+      href="https://docs.astro.build/"
+      title="Mobile Apps"
+      subtitle="React Native"
+      body="We build mobile apps using React Native to get you to market quickly without making compromises in usability. The main difference here is the lag time between needing new servers and seeing them online. It truly is incredible that you can spin up 100 powerful machines in the cloud in just a few minutes, but you also pay dearly for the privilege."
+    />
+    <Card
+      href="https://docs.astro.build/"
+      title="AI"
+      subtitle="Leverage LLMs for your products"
+      body="AI is the future, and we're here to help you get there. The main difference here is the lag time between needing new servers and seeing them online. It truly is incredible that you can spin up 100 powerful machines in the cloud in just a few minutes, but you also pay dearly for the privilege."
+    />
+    <Card
+      href="https://docs.astro.build/"
+      title="APIs"
+      subtitle="REST, GraphQL, and tRPC."
+      body="Building APIs is hard. We can help you build them right. The main difference here is the lag time between needing new servers and seeing them online. It truly is incredible that you can spin up 100 powerful machines in the cloud in just a few minutes, but you also pay dearly for the privilege."
+    />
+    <Card
+      href="https://docs.astro.build/"
+      title="SaaS"
+      subtitle="Unlock recurring revenue"
+      body="REST, GraphQL, and tRPC. The main difference here is the lag time between needing new servers and seeing them online. It truly is incredible that you can spin up 100 powerful machines in the cloud in just a few minutes, but you also pay dearly for the privilege. The main difference here is the lag time between needing new servers and seeing them online."
+    />
+    <Card
+      href="https://docs.astro.build/"
+      title="Infrastructure"
+      subtitle="Experts in AWS & Google Cloud"
+      body="Reduce costs, increase reliability, boost performance - there's always a reason to revisit your infrastructure. The main difference here is the lag time between needing new servers and seeing them online. It truly is incredible that you can spin up 100 powerful machines in the cloud in just a few minutes, but you also pay dearly for the privilege."
+    />
+    <Card
+      href="https://docs.astro.build/"
+      title="Migrations"
+      subtitle="Migrating can be scary. We can help."
+      body="REST, GraphQL, gRPC, tRPC and more. The main difference here is the lag time between needing new servers and seeing them online. It truly is incredible that you can spin up 100 powerful machines in the cloud in just a few minutes, but you also pay dearly for the privilege."
+    />
+  </CardGrid>
+  <About />
+  <Contact />
+</Layout>
+
+<style>
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 0;
+  }
+</style>
