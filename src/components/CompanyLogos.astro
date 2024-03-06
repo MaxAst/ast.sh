@@ -6,11 +6,74 @@ import Moia from "../logos/moia.svg";
 import Stryber from "../logos/stryber.svg";
 ---
 
-<div
-  class="grid grid-cols-2 gap-y-12 md:grid-cols-4 items-center justify-center place-content-center place-items-center bg-rose-50 py-7"
->
-  <Image width={150} src={MrPorter} alt="A bird sitting on a nest of eggs." />
-  <Image width={90} src={Otrium} alt="A bird sitting on a nest of eggs." />
-  <Image width={90} src={Moia} alt="A bird sitting on a nest of eggs." />
-  <Image width={110} src={Stryber} alt="A bird sitting on a nest of eggs." />
+<script type="module">
+  const adjustMarquee = () => {
+    const banner = document.getElementById("marquee-banner"); // Make sure the container has this class
+    const container = document.getElementById("marquee-container");
+    const marquee = document.getElementById("marquee");
+    const marquee2 = document.getElementById("marquee2");
+
+    console.log(`banner: ${banner.offsetWidth}`);
+    console.log(`marquee: ${marquee.offsetWidth}`);
+
+    if (marquee.offsetWidth === banner.offsetWidth) {
+      console.log("marquee is wider than banner");
+      marquee.classList.add("animate-marquee");
+      container.classList.remove("justify-center");
+
+      // marquee2.classList.add("animate-marquee2");
+      // marquee2.classList.add("flex");
+      // marquee2.classList.remove("hidden");
+
+      // Function to start marquee2 animation
+      const startMarquee2 = () => {
+        // Check if marquee has moved 80px out of the viewport
+        const marqueeRect = marquee.getBoundingClientRect();
+        if (marqueeRect.right < banner.offsetWidth - 130) {
+          marquee2.classList.add("animate-marquee2", "flex");
+          marquee2.classList.remove("hidden");
+          // Stop checking once marquee2 starts
+          cancelAnimationFrame(frameId);
+        } else {
+          // Continue checking
+          frameId = requestAnimationFrame(startMarquee2);
+        }
+      };
+
+      // Start checking position of marquee
+      let frameId = requestAnimationFrame(startMarquee2);
+    } else {
+      marquee.classList.remove("animate-marquee");
+      marquee2.classList.remove("animate-marquee2", "flex");
+      marquee2.classList.add("hidden");
+      container.classList.add("justify-center");
+    }
+  };
+
+  // Listen for DOM content loaded to set initial state.
+  document.addEventListener("DOMContentLoaded", adjustMarquee);
+
+  // Listen for window resize events to adjust the marquee as necessary.
+  window.addEventListener("resize", adjustMarquee);
+</script>
+
+<div id="marquee-banner" class="bg-rose-50 py-7 overflow-hidden">
+  <div
+    id="marquee-container"
+    class="relative flex justify-center overflow-x-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
+  >
+    <div id="marquee" class="flex whitespace-nowrap gap-20">
+      <Image id="mrp" width={150} src={MrPorter} alt="Mr Porter logo" />
+      <Image id="otrium" width={90} src={Otrium} alt="Otrium logo" />
+      <Image id="moia" width={90} src={Moia} alt="Moia logo" />
+      <Image id="stryber" width={110} src={Stryber} alt="Stryber logo" />
+    </div>
+
+    <div id="marquee2" class="absolute top-0 hidden whitespace-nowrap gap-20">
+      <Image width={150} src={MrPorter} alt="Mr Porter logo" />
+      <Image width={90} src={Otrium} alt="Otrium logo" />
+      <Image width={90} src={Moia} alt="Moia logo" />
+      <Image width={110} src={Stryber} alt="Stryber logo" />
+    </div>
+  </div>
 </div>
