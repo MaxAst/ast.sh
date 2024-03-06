@@ -6,47 +6,54 @@ import Moia from "../logos/moia.svg";
 import Stryber from "../logos/stryber.svg";
 ---
 
-<script type="module">
+<script>
+  let originalMarqueeWidth: number | null = null;
+  let originalNumberOfChildren: number | null = null;
+
   const adjustMarquee = () => {
-    const banner = document.getElementById("marquee-banner"); // Make sure the container has this class
-    const container = document.getElementById("marquee-container");
+    const container = document.getElementById("container");
     const marquee = document.getElementById("marquee");
-    const marquee2 = document.getElementById("marquee2");
 
-    console.log(`banner: ${banner.offsetWidth}`);
-    console.log(`marquee: ${marquee.offsetWidth}`);
+    if (!container || !marquee) return;
 
-    if (marquee.offsetWidth === banner.offsetWidth) {
-      console.log("marquee is wider than banner");
-      marquee.classList.add("animate-marquee");
-      container.classList.remove("justify-center");
+    const children = Array.from(marquee.children);
 
-      // marquee2.classList.add("animate-marquee2");
-      // marquee2.classList.add("flex");
-      // marquee2.classList.remove("hidden");
+    if (originalMarqueeWidth === null) {
+      originalMarqueeWidth = marquee.offsetWidth;
+    }
 
-      // Function to start marquee2 animation
-      const startMarquee2 = () => {
-        // Check if marquee has moved 80px out of the viewport
-        const marqueeRect = marquee.getBoundingClientRect();
-        if (marqueeRect.right < banner.offsetWidth - 130) {
-          marquee2.classList.add("animate-marquee2", "flex");
-          marquee2.classList.remove("hidden");
-          // Stop checking once marquee2 starts
-          cancelAnimationFrame(frameId);
-        } else {
-          // Continue checking
-          frameId = requestAnimationFrame(startMarquee2);
-        }
-      };
+    if (originalNumberOfChildren === null) {
+      originalNumberOfChildren = children.length;
+    }
 
-      // Start checking position of marquee
-      let frameId = requestAnimationFrame(startMarquee2);
+    if (originalMarqueeWidth >= container.offsetWidth) {
+      // Ensure marquee is wide enough to scroll smoothly
+      while (marquee.offsetWidth <= container.offsetWidth * 2) {
+        children.slice(0, originalNumberOfChildren).forEach((child) => {
+          const clone = child.cloneNode(true);
+          if (clone instanceof Element) {
+            clone.setAttribute("data-clone", "true");
+            marquee.appendChild(clone);
+          }
+        });
+      }
+      if (!marquee.classList.contains("animate-marquee")) {
+        marquee.classList.add("animate-marquee");
+      }
+      if (container.classList.contains("justify-center")) {
+        container.classList.remove("justify-center");
+      }
     } else {
-      marquee.classList.remove("animate-marquee");
-      marquee2.classList.remove("animate-marquee2", "flex");
-      marquee2.classList.add("hidden");
-      container.classList.add("justify-center");
+      const clones = marquee.querySelectorAll('[data-clone="true"]');
+      for (const clone of clones) {
+        marquee.removeChild(clone);
+      }
+      if (marquee.classList.contains("animate-marquee")) {
+        marquee.classList.remove("animate-marquee");
+      }
+      if (!container.classList.contains("justify-center")) {
+        container.classList.add("justify-center");
+      }
     }
   };
 
@@ -57,19 +64,12 @@ import Stryber from "../logos/stryber.svg";
   window.addEventListener("resize", adjustMarquee);
 </script>
 
-<div id="marquee-banner" class="bg-rose-50 py-7 overflow-hidden">
+<div class="bg-rose-50">
   <div
-    id="marquee-container"
-    class="relative flex justify-center overflow-x-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
+    id="container"
+    class="min-h-20 flex justify-center overflow-x-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
   >
-    <div id="marquee" class="flex whitespace-nowrap gap-20">
-      <Image id="mrp" width={150} src={MrPorter} alt="Mr Porter logo" />
-      <Image id="otrium" width={90} src={Otrium} alt="Otrium logo" />
-      <Image id="moia" width={90} src={Moia} alt="Moia logo" />
-      <Image id="stryber" width={110} src={Stryber} alt="Stryber logo" />
-    </div>
-
-    <div id="marquee2" class="absolute top-0 hidden whitespace-nowrap gap-20">
+    <div id="marquee" class="flex gap-20">
       <Image width={150} src={MrPorter} alt="Mr Porter logo" />
       <Image width={90} src={Otrium} alt="Otrium logo" />
       <Image width={90} src={Moia} alt="Moia logo" />

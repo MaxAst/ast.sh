@@ -6,8 +6,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        marquee: "marquee 10s linear infinite",
-        marquee2: "marquee2 10s linear infinite",
+        marquee: "marquee 25s linear infinite",
       },
       fontFamily: {
         sans: ["Helvetica Neue", ...defaultTheme.fontFamily.sans],
@@ -18,10 +17,6 @@ export default {
         marquee: {
           from: { transform: "translateX(0%)" },
           to: { transform: "translateX(-100%)" },
-        },
-        marquee2: {
-          from: { transform: "translateX(100%)" },
-          to: { transform: "translateX(0%)" },
         },
       },
     },
