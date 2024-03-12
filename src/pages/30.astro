@@ -1,0 +1,160 @@
+---
+import { Image } from "astro:assets";
+import Max1 from "../photos/airport.jpg";
+import Max2 from "../photos/austria.jpg";
+import Max3 from "../photos/greece.jpg";
+import Max4 from "../photos/mallorca.jpeg";
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Maxi's 30</title>
+  </head>
+  <body class="bg-black">
+    <div class="bg-white">
+      <div class="max-w-4xl min-h-screen mx-auto border-2 border-black">
+        <header class="border-b-2 border-black pt-6 pb-2 w-[90%] mx-auto">
+          <p class="text-3xl font-specialty uppercase text-center">
+            20 April, 2024 - 16:30
+          </p>
+        </header>
+        <main class="p-6">
+          <h1 class="text-5xl font-special uppercase text-center">
+            Back to the 90<span class="lowercase">s</span>
+          </h1>
+          <p class="text-3xl font-specialty uppercase pb-4 text-center">
+            Noch einmal so wie damals.
+          </p>
+          <div
+            class="grid grid-cols-2 grid-rows-2 w-full h-80 md:h-96 max-w-96 border-2 border-black mx-auto mb-8"
+          >
+            <div
+              class="overflow-hidden border-r-2 border-b-2 border-black w-full h-full"
+            >
+              <Image
+                class="object-cover w-full h-full"
+                src={Max1}
+                alt="Maximilian Ast - Chief Product Builder at Ast Product Studios"
+              />
+            </div>
+            <div class="overflow-hidden border-b-2 border-black">
+              <Image
+                class="object-cover w-full h-full"
+                src={Max2}
+                alt="Maximilian Ast - Chief Product Builder at Ast Product Studios"
+              />
+            </div>
+            <div class="overflow-hidden border-r-2 border-black">
+              <Image
+                class="object-cover w-full h-full"
+                src={Max3}
+                alt="Maximilian Ast - Chief Product Builder at Ast Product Studios"
+              />
+            </div>
+            <div class="overflow-hidden">
+              <Image
+                class="object-cover w-full h-full"
+                src={Max4}
+                alt="Maximilian Ast - Chief Product Builder at Ast Product Studios"
+              />
+            </div>
+          </div>
+          <div class="pb-5 text-center">
+            <h2 class="text-7xl font-special uppercase -mb-2">Maxi</h2>
+            <h2 class="text-5xl font-specialty uppercase">Is Thirty</h2>
+          </div>
+          <p class="text-2xl font-specialty uppercase pb-4 text-center">
+            Belforter Str. 9, 10405 Berlin
+          </p>
+          <h3 class="font-bold">Motto</h3>
+          <p class="font-serif max-w-prose text-justify mx-auto pb-1.5">
+            Wie manche von euch wissen, gefällt mir die Vorstellung 30 zu werden
+            überhaupt nicht. Genau deshalb möchte ich mit euch die Zeit zurück
+            drehen und zusammen im Stil unserer geliebten 90er Jahre feiern.
+            Outfits wie helle Jeans, Nikes und co. sind gern gesehen aber kein
+            Muss.
+          </p>
+          <h3 class="font-bold">Wo & Wann</h3>
+          <p class="font-serif max-w-prose text-justify mx-auto pb-1.5">
+            Die Feier findet in meinem Office in Prenzlauer Berg statt. Wir
+            starten um 16:30 Uhr und feiern bis die Polizei kommt.
+          </p>
+          <h3 class="font-bold">Geschenke</h3>
+          <p class="font-serif max-w-prose text-justify mx-auto pb-1.5">
+            Da einige von euch extra anreisen, möchte ich keine Geschenke. Dass
+            ihr kommt ist das schönste Geschenk für mich. Falls ihr unbedingt
+            trotzdem etwas schenken wollt, könnt ihr mich gerne bei meinem neuen
+            Hobby der analogen Fotografie unterstützen, z.B. mit einem <a
+              class="text-blue-400 underline"
+              href="https://www.amazon.de/Kodak-kodacolor-Gold-200-GB-135-36-CN/dp/B0002DE5FG/ref=sr_1_5?crid=2RZC380049W70&dib=eyJ2IjoiMSJ9.SiGxFA0i5T6fESUu9PtkIMSeGV9XOLFLqIjijrPuJNPR9Mp7lOR_7JIBtX7p-2ddvsyZkC7XlHJmwDCsI-EiuuavBtZHozr5KZXZFdfiWUaPWvIozsSu10wO8KswH0R6HMCgHnqCYRHC_8C3_TR9Gji9BUOJHzqn6lyVqMsrnRyEq5E2nrtDzvb_uTAJX1pZSi80I0hRMHoAS-KaRf4U3o975pGxZvs8fVm-BD9IdEA.HDH4L6paO_KyhmEBA-2JWUFYezoF6oUcmQ3qls_F_S0&dib_tag=se&keywords=kodak+film&qid=1710235748&sprefix=kodak+film%2Caps%2C90&sr=8-5"
+              target="_blank"
+              rel="noopener">Kodak Film</a
+            > und einem Gutschein beim <a
+              class="text-blue-400 underline"
+              href="https://safelightberlin.com/collections/gift-cards"
+              target="_blank"
+              rel="noopener">Filmentwickler meiner Wahl</a
+            >.
+          </p>
+          <div class="py-4">
+            <div
+              class="bg-gradient-to-b from-stone-300/40 to-transparent p-[4px] rounded-[16px]"
+            >
+              <button
+                class="w-full group p-[4px] rounded-[12px] bg-gradient-to-b from-white to-stone-200/40 shadow-[0_1px_3px_rgba(0,0,0,0.5)] active:shadow-[0_0px_1px_rgba(0,0,0,0.5)] active:scale-[0.995]"
+              >
+                <div
+                  class="w-full bg-gradient-to-b from-stone-200/40 to-white/80 rounded-[8px] px-2 py-2"
+                >
+                  <span class="font-semibold">Final Zusagen</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  @font-face {
+    font-family: "Bauer Bodoni Condensed";
+    src: url("/fonts/bauer/Bauer Bodoni Black Condensed.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Bauer Bodoni Condensed Bold";
+    src: url("/fonts/bauer/Bauer-Bodoni-Condensed-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Lusitana";
+    src: url("/fonts/Lusitana-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Lusitana";
+    src: url("/fonts/Lusitana-Bold.ttf") format("ttf");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>

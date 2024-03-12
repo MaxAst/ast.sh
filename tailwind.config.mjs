@@ -6,16 +6,21 @@ export default {
   theme: {
     extend: {
       animation: {
-        marquee: "marquee 25s linear infinite",
+        marquee: "marquee 15s linear infinite",
       },
       fontFamily: {
         sans: ["Helvetica Neue", ...defaultTheme.fontFamily.sans],
         serif: ["Lusitana", ...defaultTheme.fontFamily.serif],
         display: ["Source Serif Pro", ...defaultTheme.fontFamily.serif],
+        special: ["Bauer Bodoni Condensed", ...defaultTheme.fontFamily.serif],
+        specialty: [
+          "Bauer Bodoni Condensed Bold",
+          ...defaultTheme.fontFamily.serif,
+        ],
       },
       keyframes: {
         marquee: {
-          from: { transform: "translateX(0%)" },
+          from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
         },
       },
