@@ -1,6 +1,16 @@
-<ul
-  role="list"
-  class="px-3 md:px-0 grid md:grid-cols-3 gap-y-3 md:gap-y-6 md:gap-x-12 py-10"
->
-  <slot />
-</ul>
+<div class="py-10 px-3 xl:px-0">
+  <h3
+    class="font-display font-bold text-2xl md:text-4xl leading-tight md:leading-snug bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-900"
+  >
+    Consulting
+  </h3>
+  <h4 class="pb-3 text-xl text-neutral-400">
+    TypeScript & React Experts - From Mobile Apps to Complex Backend Systems
+  </h4>
+  <ul
+    role="list"
+    class="py-10 grid md:grid-cols-3 gap-y-6 xl:gap-y-12 xl:gap-x-12"
+  >
+    <slot />
+  </ul>
+</div>

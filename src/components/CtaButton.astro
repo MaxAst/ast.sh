@@ -1,5 +1,5 @@
 ---
-
+const { title } = Astro.props;
 ---
 
 <div class="py-4">
@@ -12,7 +12,7 @@
       <div
         class="bg-gradient-to-b from-stone-200/40 to-white/80 rounded-[8px] px-2 py-2"
       >
-        <span class="font-semibold">Business Inquiry</span>
+        <span class="font-semibold">{title}</span>
       </div>
     </button>
   </div>

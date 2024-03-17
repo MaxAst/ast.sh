@@ -1,89 +1,138 @@
 ---
+import { Image } from "astro:assets";
+
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
 import Card from "../components/Card.astro";
 import CardGrid from "../components/CardGrid.astro";
 import Contact from "../components/Contact.astro";
 import CompanyLogos from "../components/CompanyLogos.astro";
+import CtaButton from "@/components/CtaButton.astro";
+
+import Time from "../photos/times.webp";
 ---
 
 <Layout title="ast.sh">
   <CompanyLogos />
+
+  <div class="pt-20 pb-12 px-3 xl:px-0 md:grid grid-cols-8 gap-x-12">
+    <div class="col-span-5 text-justify">
+      <h3
+        class="font-display font-bold text-3xl md:text-4xl leading-tight md:leading-snug bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-900"
+      >
+        Times Are Changing
+      </h3>
+      <h4 class="pb-3 text-xl text-neutral-400">
+        AI and Software Development: A New Era
+      </h4>
+      <div class="md:hidden mb-3">
+        <Image
+          src={Time}
+          alt="Software Engineering with AI"
+          class="shadow-lg"
+        />
+      </div>
+      <p class="font-serif leading-relaxed pb-2">
+        In this transformative era marked by advanced Large Language Models
+        (LLMs), we face both excitement and uncertainty. Yet, we see
+        unparalleled opportunity.
+      </p>
+      <p class="font-serif leading-relaxed pb-2">
+        Our studio thrives at the intersection of seasoned software engineering
+        and AI's innovative potential. We don't just use AI; we blend it with
+        our deep industry experience to enhance creativity and efficiency. This
+        unique combination propels us beyond traditional boundaries, unlocking
+        innovative, tailored software solutions.
+      </p>
+      <p class="font-serif leading-relaxed pb-2">
+        Join us in embracing the future. Discover how our expertise combined
+        with cutting-edge AI can create software that truly stands out.
+      </p>
+      <div class="flex">
+        <CtaButton title="Let's build something great" />
+      </div>
+    </div>
+
+    <div class="col-span-3 hidden md:block">
+      <Image src={Time} alt="Software Engineering with AI" class="shadow-lg" />
+    </div>
+  </div>
+
   <CardGrid>
     <Card
       href="https://docs.astro.build/"
       title="Mobile Apps"
-      subtitle="React Native"
-      body="We build mobile apps using React Native to get you to market quickly without making compromises in usability. The main difference here is the lag time between needing new servers and seeing them online. It truly is incredible that you can spin up 100 powerful machines in the cloud in just a few minutes, but you also pay dearly for the privilege."
+      subtitle="React Native & Expo"
+      body="Tap into our React Native experience to swiftly develop delightful mobile apps. We prioritize efficient delivery while maintaining quality, ensuring your app meets deadlines and user expectations. "
+    />
+    <Card
+      href="https://docs.astro.build/"
+      title="Web Apps"
+      subtitle="React, Next.js, Remix, Astro"
+      body="We lead you in crafting responsive, engaging web applications that convert visitors into users. Enhancing current platforms or starting anew, we make your web presence strong and memorable."
     />
     <Card
       href="https://docs.astro.build/"
       title="AI"
-      subtitle="Leverage LLMs for your products"
-      body="AI is the future, and we're here to help you get there. The main difference here is the lag time between needing new servers and seeing them online. It truly is incredible that you can spin up 100 powerful machines in the cloud in just a few minutes, but you also pay dearly for the privilege."
+      subtitle="Integrate LLMs into your products"
+      body="It's not about adding a 'Chat with AI' feature for the sake of novelty; we aim to implement LLMs where they can make a real difference, bringing genuine value to your products."
     />
     <Card
       href="https://docs.astro.build/"
       title="APIs"
       subtitle="REST, GraphQL, and tRPC."
-      body="Building APIs is hard. We can help you build them right. The main difference here is the lag time between needing new servers and seeing them online. It truly is incredible that you can spin up 100 powerful machines in the cloud in just a few minutes, but you also pay dearly for the privilege."
-    />
-    <Card
-      href="https://docs.astro.build/"
-      title="SaaS"
-      subtitle="Unlock recurring revenue"
-      body="REST, GraphQL, and tRPC. The main difference here is the lag time between needing new servers and seeing them online. It truly is incredible that you can spin up 100 powerful machines in the cloud in just a few minutes, but you also pay dearly for the privilege. The main difference here is the lag time between needing new servers and seeing them online."
+      body="API development can be intricate. We offer guidance in designing and implementing REST, GraphQL, and tRPC APIs, ensuring they are secure, scalable, and maintainable, facilitating smooth integration and data exchange across your systems."
     />
     <Card
       href="https://docs.astro.build/"
       title="Infrastructure"
-      subtitle="Experts in AWS & Google Cloud"
-      body="Reduce costs, increase reliability, boost performance - there's always a reason to revisit your infrastructure. The main difference here is the lag time between needing new servers and seeing them online. It truly is incredible that you can spin up 100 powerful machines in the cloud in just a few minutes, but you also pay dearly for the privilege."
+      subtitle="AWS, GCP, Cloudflare, Vercel"
+      body="Optimize your cloud infrastructure with our expert guidance. We specialize in AWS, GCP, Cloudflare and Vercel. We help you reduce costs, enhance reliability, and boost performance, ensuring your infrastructure scales effectively with your business."
     />
     <Card
       href="https://docs.astro.build/"
       title="Migrations"
-      subtitle="Migrating can be scary. We can help."
-      body="REST, GraphQL, gRPC, tRPC and more. The main difference here is the lag time between needing new servers and seeing them online. It truly is incredible that you can spin up 100 powerful machines in the cloud in just a few minutes, but you also pay dearly for the privilege."
+      subtitle="Overcome scalability issues"
+      body="Whether you're moving between tech stacks or switching cloud providers, we provide end-to-end support for your migration projects, minimizing downtime and ensuring a smooth, secure transition for your critical data and services."
     />
   </CardGrid>
   <About />
   <Contact />
-</Layout>
 
-<style>
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
-    background: linear-gradient(
-      rgba(var(--accent-dark), 66%),
-      rgba(var(--accent-dark), 33%)
-    );
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-  .instructions code {
-    font-size: 0.8em;
-    font-weight: bold;
-    background: rgba(var(--accent-light), 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3em 0.4em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent-light));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    padding: 0;
-  }
-</style>
+  <style>
+    .text-gradient {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+    }
+    .instructions {
+      margin-bottom: 2rem;
+      border: 1px solid rgba(var(--accent-light), 25%);
+      background: linear-gradient(
+        rgba(var(--accent-dark), 66%),
+        rgba(var(--accent-dark), 33%)
+      );
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    .instructions code {
+      font-size: 0.8em;
+      font-weight: bold;
+      background: rgba(var(--accent-light), 12%);
+      color: rgb(var(--accent-light));
+      border-radius: 4px;
+      padding: 0.3em 0.4em;
+    }
+    .instructions strong {
+      color: rgb(var(--accent-light));
+    }
+    .link-card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      padding: 0;
+    }
+  </style>
+</Layout>
