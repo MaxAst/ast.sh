@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import CtaButton from "./CtaButton.astro";
+import Time from "../photos/times.webp";
+---
+
+<div class="pt-20 pb-12 px-3 xl:px-0 md:grid grid-cols-8 gap-x-12">
+  <div class="col-span-5">
+    <h3
+      class="font-display font-bold text-3xl md:text-4xl leading-tight md:leading-snug bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-900"
+    >
+      Times Are Changing
+    </h3>
+    <h4 class="pb-3 text-xl text-neutral-400">
+      AI and Software Development: A New Era
+    </h4>
+    <div class="md:hidden mb-3">
+      <Image src={Time} alt="Software Engineering with AI" class="shadow-lg" />
+    </div>
+    <p class="font-serif leading-relaxed pb-2">
+      In this transformative era marked by advanced Large Language Models
+      (LLMs), we face both excitement and uncertainty. Yet, we see unparalleled
+      opportunity.
+    </p>
+    <p class="font-serif leading-relaxed pb-2">
+      Our studio thrives at the intersection of seasoned software engineering
+      and AI's innovative potential. We don't just use AI; we blend it with our
+      deep industry experience to enhance creativity and efficiency. This unique
+      combination propels us beyond traditional boundaries, unlocking
+      innovative, tailored software solutions.
+    </p>
+    <p class="font-serif leading-relaxed pb-2">
+      Join us in embracing the future. Discover how our expertise combined with
+      cutting-edge AI can create software that truly stands out.
+    </p>
+    <div class="flex">
+      <CtaButton title="Let's build something great" />
+    </div>
+  </div>
+
+  <div class="col-span-3 hidden md:block">
+    <Image src={Time} alt="Software Engineering with AI" class="shadow-lg" />
+  </div>
+</div>

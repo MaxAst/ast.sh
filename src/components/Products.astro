@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import Loopa from "../photos/loopa-icon.png";
+import Favora from "../photos/favora-icon.png";
+import { ExternalLink } from "lucide-astro";
+---
+
+<div id="products" class="py-10 px-3 xl:px-0">
+  <h3
+    class="font-display font-bold text-3xl md:text-4xl leading-tight md:leading-snug bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-900"
+  >
+    Products
+  </h3>
+  <h4 class="pb-3 text-xl text-neutral-400">
+    Aside from consulting, we also build and release our own products. Here are
+    some of our favorites
+  </h4>
+  <ul
+    role="list"
+    class="pt-3 pb-10 grid md:grid-cols-3 gap-y-6 gap-x-3 xl:gap-y-12 xl:gap-x-5"
+  >
+    <li>
+      <a href="https://www.favora.net">
+        <div
+          class="p-4 h-full bg-gradient-to-b from-neutral-50 to-neutral-100 border-2 border-neutral-200 rounded-xl shadow group"
+        >
+          <div class="flex justify-between">
+            <div class="flex items-center gap-x-3 pb-2">
+              <Image
+                class="w-14 rounded-xl shadow"
+                src={Favora}
+                alt="Favora Icon"
+              />
+              <div>
+                <h4 class="font-display font-medium text-2xl">Favora</h4>
+                <p class="text-neutral-400">favora.net</p>
+              </div>
+            </div>
+            <ExternalLink
+              class="w-6 h-6 opacity-0 -translate-x-10 translate-y-10 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 ease-in-out"
+            />
+          </div>
+          <p class="font-serif">
+            A mobile app that let's users bookmark items while shopping online.
+            It's a great way to keep track of your favorite products, curate
+            outfits, and share them with friends. Interested in beta testing?
+            Let us know!
+          </p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.loopa.so" target="_blank" rel="noopener">
+        <div
+          class="p-4 h-full bg-gradient-to-b from-neutral-50 to-neutral-100 border-2 border-neutral-200 rounded-xl shadow group"
+        >
+          <div class="flex justify-between">
+            <div class="flex items-center gap-x-3 pb-2">
+              <Image
+                class="w-14 rounded-xl shadow"
+                src={Loopa}
+                alt="Loopa Icon"
+              />
+              <div>
+                <h4 class="font-display font-medium text-2xl">Loopa</h4>
+                <p class="text-neutral-400">loopa.so</p>
+              </div>
+            </div>
+            <ExternalLink
+              class="w-6 h-6 opacity-0 -translate-x-10 translate-y-10 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-200 ease-in-out"
+            />
+          </div>
+          <p class="font-serif">
+            A social app that fosters IRL connections & experiences. It's
+            uniquely designed for millennials that move around a lot. If you're
+            interested in beta testing or collaborating, feel free to reach out!
+          </p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <div
+        class="p-4 h-full bg-gradient-to-b from-neutral-50 to-neutral-100 border-2 border-neutral-200 rounded-xl shadow"
+      >
+        <h4 class="font-display font-medium text-2xl">Easy Privacy</h4>
+        <p class="text-neutral-400 pb-2">easyprivacy.ai</p>
+        <p class="font-serif">
+          A GitHub App, which generates a privacy policy based on the contents
+          of your git repo. The easiest way to remain compliant as your product
+          evolves. Say goodbye to generic generators and manual updates.
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
