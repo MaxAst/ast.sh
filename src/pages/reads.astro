@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const reads = [
+  "https://world.hey.com/dhh/chart-the-course-set-the-pace-hold-the-line-0f3ea916",
+  "https://shayy.org/posts/cache-control/",
+  "https://www.totaltypescript.com/typescript-and-node",
+  "https://www.totaltypescript.com/tsconfig-cheat-sheet",
+];
+---
+
+<Layout title="ast.sh">
+  <div class="pt-20 pb-12 px-3 xl:px-0">
+    <h3
+      class="font-display font-bold text-3xl md:text-4xl leading-tight md:leading-snug bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-900"
+    >
+      Good Reads
+    </h3>
+    <h4 class="pb-3 text-xl text-neutral-400">Pieces I enjoyed reading</h4>
+    <ul>
+      {
+        reads.map((read) => (
+          <li>
+            <a href={read}>{read}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>
