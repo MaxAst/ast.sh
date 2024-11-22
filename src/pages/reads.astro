@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../lib/constants";
 
 const reads = [
   "https://world.hey.com/dhh/chart-the-course-set-the-pace-hold-the-line-0f3ea916",
@@ -9,7 +10,7 @@ const reads = [
 ];
 ---
 
-<Layout title="ast.sh">
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <div class="pt-20 pb-12 px-3 xl:px-0">
     <h3
       class="font-display font-bold text-3xl md:text-4xl leading-tight md:leading-snug bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 to-neutral-900"
