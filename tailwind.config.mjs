@@ -13,7 +13,9 @@ export default {
         marquee: "marquee 15s linear infinite",
       },
       fontFamily: {
-        sans: ["Helvetica Neue", ...defaultTheme.fontFamily.sans],
+        sans: ["Geist", ...defaultTheme.fontFamily.sans],
+        mono: ["'Geist Mono'", ...defaultTheme.fontFamily.mono],
+        // sans: ["Helvetica Neue", ...defaultTheme.fontFamily.sans],
         serif: ["Lusitana", ...defaultTheme.fontFamily.serif],
         display: ["Source Serif Pro", ...defaultTheme.fontFamily.serif],
         special: ["Bauer Bodoni Condensed", ...defaultTheme.fontFamily.serif],

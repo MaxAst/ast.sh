@@ -1,0 +1,84 @@
+---
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Work with us if you want to ship delightful software powered by AI."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-slate-700">
+    <div class="bg-white">
+      <div class="max-w-[1100px] min-h-screen mx-auto pb-8">
+        <header>
+          <Nav />
+        </header>
+        <main>
+          <slot />
+        </main>
+        <Footer />
+      </div>
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "Lusitana";
+    src: url("/fonts/Lusitana-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Lusitana";
+    src: url("/fonts/Lusitana-Bold.ttf") format("ttf");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Source Serif Pro";
+    src: url("/fonts/source-serif-pro_5.0.8/webfonts/source-serif-pro-latin-700-normal.woff2")
+      format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Helvetica Neue";
+    src: url("/fonts/helvetica-neue-55-cdnfonts/webfonts/HelveticaNeueBold.ttf")
+      format("ttf");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Helvetica Neue";
+    src: url("/fonts/helvetica-neue-55-cdnfonts/webfonts/HelveticaNeueMedium.ttf")
+      format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>

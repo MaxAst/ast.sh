@@ -1,0 +1,19 @@
+---
+import { BSKY, GITHUB, SITE_TITLE, TWITTER } from "../lib/constants";
+---
+
+<header class="h-10 px-4 py-2">
+  <nav class="flex items-center justify-between">
+    <div>
+      <a href="/" class="font-medium text-neutral-500 hover:underline">
+        {SITE_TITLE}
+      </a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="/posts" class="font-medium hover:underline">posts</a>
+      <a href={TWITTER} class="font-medium hover:underline">twitter</a>
+      <a href={BSKY} class="font-medium hover:underline">bsky</a>
+      <a href={GITHUB} class="font-medium hover:underline">github</a>
+    </div>
+  </nav>
+</header>
