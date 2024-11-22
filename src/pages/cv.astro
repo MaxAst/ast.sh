@@ -1,0 +1,111 @@
+---
+import "@/styles/globals.css";
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Maximilian Ast's CV</title>
+  </head>
+  <body class="bg-white text-black p-8">
+    <div class="container mx-auto flex flex-col space-y-6 max-w-4xl">
+      <div class="text-center">
+        <h1 class="text-2xl font-bold">Maximilian Ast</h1>
+        <p>Passionate Software Engineer specializing in TypeScript & React</p>
+      </div>
+      <div>
+        <h2 class="text-xl font-bold">Experience</h2>
+        <ul class="list-disc space-y-2 ml-5">
+          <li>
+            <strong>Senior Software Engineer</strong>, TechCorp Inc.
+            (2019-Present)
+            <br />Developed and maintained advanced web applications using
+            TypeScript and React, leading a team of 5 developers.
+          </li>
+          <li>
+            <strong>Software Engineer</strong>, DevSolutions (2016-2019)
+            <br />Implemented responsive front-end solutions, improving user
+            experience and application performance.
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xl font-bold">Education</h2>
+        <p>
+          <strong>M.Sc. in Computer Science</strong>, University of St Andrews
+          (2017-2018)
+        </p>
+        <p>
+          <strong>B.Sc. in Economics</strong>, Erasmus University Rotterdam
+          (2013-2016)
+        </p>
+      </div>
+      <div>
+        <h2 class="text-xl font-bold">Skills</h2>
+        <p>TypeScript, React, Redux, Node.js, HTML5, CSS3, Tailwind CSS, Git</p>
+      </div>
+      <div>
+        <h2 class="text-xl font-bold">Contact</h2>
+        <p>Email: max.mustermann@example.com</p>
+        <p>LinkedIn: linkedin.com/in/maxmustermann</p>
+      </div>
+    </div>
+  </body>
+
+  <style>
+    @media print {
+      @page {
+        margin: 15mm;
+      }
+      body {
+        margin: 0;
+      }
+      .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    @font-face {
+      font-family: "Bauer Bodoni Condensed";
+      src: url("/fonts/bauer/Bauer Bodoni Black Condensed.otf")
+        format("opentype");
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Bauer Bodoni Condensed Bold";
+      src: url("/fonts/bauer/Bauer-Bodoni-Condensed-Bold.otf")
+        format("opentype");
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Lusitana";
+      src: url("/fonts/Lusitana-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Lusitana";
+      src: url("/fonts/Lusitana-Bold.ttf") format("truetype");
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+</html>
