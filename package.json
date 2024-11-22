@@ -11,15 +11,15 @@
     "update": "npx npm-check-updates -u && npm install"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.9",
-    "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.5.6",
-    "lucide-astro": "^0.359.0",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.2",
+    "astro": "^4.16.14",
+    "lucide-astro": "^0.460.0",
     "mini-svg-data-uri": "^1.4.4",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.4.2"
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.6.1"
+    "@biomejs/biome": "^1.9.4"
   }
 }
