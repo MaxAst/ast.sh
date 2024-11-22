@@ -17,3 +17,4 @@
 - [ ] create chrome extension based on GDPR EU open source tool
 - [ ] make a tool to create German tax reports for crypto wallet transactions
 - [ ] how to make price graphs for a crypto portfolio using skia
+- [ ] add a HIGHER themed game which works similar to frankie the flower
