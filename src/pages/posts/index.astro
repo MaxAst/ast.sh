@@ -4,8 +4,8 @@ import Layout from "../../layouts/Layout.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../lib/constants";
 import { formatDate } from "../../lib/utils";
 
-const collection = await getCollection("posts");
-const posts = collection.sort(
+const collection = await getCollection("blog");
+const posts = collection.filter((post) => !post.data.isDraft).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 ---
@@ -17,7 +17,7 @@ const posts = collection.sort(
         posts.map((post) => (
           <li>
             <a
-              href={`/posts/${post.slug}`}
+              href={`/posts/${post.id}`}
               class="group flex justify-between gap-3"
             >
               <span class="group-hover:underline">{post.data.title}</span>
