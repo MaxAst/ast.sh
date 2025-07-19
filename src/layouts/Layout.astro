@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 
@@ -60,7 +60,7 @@ const { title, description, image = "/blog-placeholder.svg" } = Astro.props;
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="font-sans text-neutral-900 antialiased">
     <Header />
