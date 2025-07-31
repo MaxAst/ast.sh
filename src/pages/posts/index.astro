@@ -1,18 +1,18 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../../lib/constants";
-import { formatDate } from "../../lib/utils";
+import { getCollection } from 'astro:content'
+import Layout from '../../layouts/Layout.astro'
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../lib/constants'
+import { formatDate } from '../../lib/utils'
 
-const collection = await getCollection("blog");
-const posts = collection.filter((post) => !post.data.isDraft).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-);
+const collection = await getCollection('blog')
+const posts = collection
+  .filter((post) => !post.data.isDraft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <main class="mx-auto my-12 flex max-w-lg flex-col justify-center p-4">
-    <ul class="flex flex-col gap-1.5">
+  {posts.length > 0 ? <ul class="flex flex-col gap-1.5">
       {
         posts.map((post) => (
           <li>
@@ -28,6 +28,6 @@ const posts = collection.filter((post) => !post.data.isDraft).sort(
           </li>
         ))
       }
-    </ul>
+    </ul> : <p>First post coming soon!</p>}
   </main>
 </Layout>

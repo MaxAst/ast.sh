@@ -2,6 +2,7 @@
 title: "Effectifying a Fastify tRPC server"
 description: "Step by step guide on how to add effect to an existing Fastify tRPC server"
 date: "Jul 18 2025"
+isDraft: true
 ---
 
 # Integrating Effect with Fastify and tRPC: A Type-Safe Journey
