@@ -1,6 +1,6 @@
 ---
-title: "Privacy Policy - Videotext Live"
-description: "Privacy policy for the Videotext Live app."
+title: "Privacy Policy - Teletext Pro"
+description: "Privacy policy for the Teletext Pro app."
 date: 2025-02-12
 isDraft: false
 ---
@@ -9,7 +9,7 @@ isDraft: false
 
 **Last updated: February 12, 2025**
 
-Videotext Live ("the App") is distributed by:
+Teletext Pro ("the App") is distributed by:
 
 Camarelle Ventures GmbH
 c/o Ast/Onward2
@@ -24,11 +24,11 @@ This privacy policy explains how the App handles your information.
 
 ## What the App Does
 
-Videotext Live is a native iOS app that provides a web view for browsing publicly available teletext content from ARD's web-based teletext service at [ard-text.de](https://www.ard-text.de). All content displayed in the App is owned by and originates directly from ARD. The App does not host, modify, or redistribute any of this content - it simply provides a convenient mobile interface for accessing it.
+Teletext Pro is a native iOS app that provides a web view for browsing publicly available teletext content from ARD's web-based teletext service at [ard-text.de](https://www.ard-text.de). All content displayed in the App is owned by and originates directly from ARD. The App does not host, modify, or redistribute any of this content - it simply provides a convenient mobile interface for accessing it.
 
 ## Data Collection
 
-Videotext Live does **not** collect, store, or transmit any personal data. The App:
+Teletext Pro does **not** collect, store, or transmit any personal data. The App:
 
 - Does not require an account or login
 - Does not collect analytics or usage data
@@ -38,7 +38,7 @@ Videotext Live does **not** collect, store, or transmit any personal data. The A
 
 ## Network Requests
 
-The App makes network requests solely to fetch publicly available teletext pages from ARD (`ard-text.de`). These requests are made directly from your device to ARD's servers. Videotext Live does not route these requests through any intermediary server and does not log or monitor them.
+The App makes network requests solely to fetch publicly available teletext pages from ARD (`ard-text.de`). These requests are made directly from your device to ARD's servers. Teletext Pro does not route these requests through any intermediary server and does not log or monitor them.
 
 ## Third-Party Services
 
