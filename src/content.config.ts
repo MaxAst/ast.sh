@@ -12,4 +12,16 @@ const blog = defineCollection({
   })
 });
 
-export const collections = { blog };
+const apps = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/apps" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.coerce.date(),
+    isDraft: z.boolean().default(false),
+    platform: z.string().optional(),
+    appStoreUrl: z.string().optional(),
+  })
+});
+
+export const collections = { blog, apps };

@@ -1,0 +1,33 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import { render } from "astro:content";
+
+export async function getStaticPaths() {
+  const apps = await getCollection("apps");
+  return apps
+    .filter((app) => !app.data.isDraft && app.id.endsWith("/privacy"))
+    .map((app) => ({
+      params: { slug: app.id.replace(/\/privacy$/, "").replace(/\/$/, "") },
+      props: app,
+    }));
+}
+type Props = CollectionEntry<"apps">;
+
+const page = Astro.props;
+const { Content } = await render(page);
+---
+
+<Layout
+  title={page.data.title}
+  description={page.data.description}
+>
+  <main class="mx-auto my-12 flex max-w-xl flex-col justify-center p-4">
+    <article>
+      <Content />
+    </article>
+    <nav class="mt-8 text-sm text-neutral-500">
+      <a href={`/apps/${Astro.params.slug}`} class="hover:underline">&larr; Back to {Astro.params.slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())}</a>
+    </nav>
+  </main>
+</Layout>
