@@ -1,61 +1,61 @@
 ---
-title: "Privacy Policy - Teletext Pro"
-description: "Privacy policy for the Teletext Pro app."
-date: 2025-02-12
+title: "Datenschutzerklärung - Teletext Pro"
+description: "Datenschutzhinweise für die App Teletext Pro."
+date: 2026-02-15
 isDraft: false
 ---
 
-# Privacy Policy
+# Datenschutzerklärung
 
-**Last updated: February 12, 2025**
+**Stand: 15. Februar 2026**
 
-Teletext Pro ("the App") is distributed by:
+Verantwortlich für Teletext Pro (die "App") ist:
 
 Camarelle Ventures GmbH
 c/o Ast/Onward2
 Belforter Str. 9
 10405 Berlin
 
-Managing Director: Maximilian Ast
+Geschäftsführer: Maximilian Ast
 
-VAT-ID: DE343373975
+USt-IdNr.: DE343373975
 
-This privacy policy explains how the App handles your information.
+Diese Datenschutzerklärung erklärt, welche Daten in der App verarbeitet werden.
 
-## What the App Does
+## Was die App macht
 
-Teletext Pro is a native iOS app that provides a web view for browsing publicly available teletext content from ARD's web-based teletext service at [ard-text.de](https://www.ard-text.de). All content displayed in the App is owned by and originates directly from ARD. The App does not host, modify, or redistribute any of this content - it simply provides a convenient mobile interface for accessing it.
+Teletext Pro ist eine native iOS-App, die öffentlich zugängliche Teletext-Inhalte von ARD, ZDF und WDR in einer WebView anzeigt. Die Inhalte stammen direkt von den jeweiligen Anbietern unter [ard-text.de](https://www.ard-text.de), [teletext.zdf.de](https://teletext.zdf.de) und [mobiltext.wdr.de](https://mobiltext.wdr.de). Die App hostet, verändert oder verteilt diese Inhalte nicht.
 
-## Data Collection
+## Erhebung und Verarbeitung personenbezogener Daten
 
-Teletext Pro does **not** collect, store, or transmit any personal data. The App:
+Teletext Pro erhebt, speichert oder übermittelt keine personenbezogenen Daten. Die App:
 
-- Does not require an account or login
-- Does not collect analytics or usage data
-- Does not use tracking technologies or advertising identifiers
-- Does not use cookies
-- Does not access your contacts, photos, location, or any other device data
+- erfordert kein Konto und kein Login
+- erhebt keine Analyse- oder Nutzungsdaten
+- nutzt keine Tracking-Technologien oder Werbe-IDs
+- setzt keine eigenen Cookies
+- greift nicht auf Kontakte, Fotos, Standort oder andere Gerätedaten zu
 
-## Network Requests
+## Netzwerkzugriffe
 
-The App makes network requests solely to fetch publicly available teletext pages from ARD (`ard-text.de`). These requests are made directly from your device to ARD's servers. Teletext Pro does not route these requests through any intermediary server and does not log or monitor them.
+Die App stellt Netzwerkverbindungen ausschließlich her, um öffentlich verfügbare Teletext-Seiten von ARD, ZDF und WDR zu laden. Diese Anfragen gehen direkt von deinem Gerät an die Server der jeweiligen Anbieter. Teletext Pro leitet die Anfragen nicht über eigene Server und protokolliert sie nicht.
 
-## Third-Party Services
+## Drittanbieter
 
-The App does not integrate any third-party analytics, advertising, or tracking SDKs. No data is shared with third parties.
+Die App bindet keine Drittanbieter-SDKs für Analytics, Werbung oder Tracking ein. Es werden keine personenbezogenen Daten an Dritte übermittelt.
 
-## Data Storage
+## Lokale Speicherung
 
-The App does not store any data on your device beyond what is required by the operating system to run the application.
+Die App speichert keine personenbezogenen Daten. Technisch notwendige, temporäre Daten (z. B. durch iOS oder die WebView) werden ausschließlich lokal auf deinem Gerät verwaltet.
 
-## Children's Privacy
+## Datenschutz bei Kindern
 
-The App does not collect any personal information from anyone, including children under the age of 13.
+Die App erhebt keine personenbezogenen Daten von Nutzern, einschließlich Kindern unter 13 Jahren.
 
-## Changes to This Policy
+## Änderungen dieser Datenschutzerklärung
 
-If this privacy policy is updated, the revised version will be posted on this page with an updated date.
+Wenn diese Datenschutzerklärung aktualisiert wird, wird die neue Version auf dieser Seite mit aktualisiertem Datum veröffentlicht.
 
-## Contact
+## Kontakt
 
-If you have questions about this privacy policy, you can reach out via [Twitter](https://x.com/maxast) or [GitHub](https://github.com/maxast).
+Wenn du Fragen zu dieser Datenschutzerklärung hast, erreichst du mich via [Twitter](https://x.com/maxast) oder [GitHub](https://github.com/maxast).

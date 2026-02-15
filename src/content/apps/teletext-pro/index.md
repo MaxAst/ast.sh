@@ -1,41 +1,42 @@
 ---
 title: "Teletext Pro"
-description: "ARD Teletext on your iPhone."
-date: 2025-02-12
+description: "ARD, ZDF und WDR Teletext auf deinem iPhone."
+date: 2026-02-15
 isDraft: false
 platform: "ios"
 appStoreUrl: "https://apps.apple.com/app/teletext-pro/id6759070545"
 ---
 
-Browse ARD Teletext directly on your iPhone. Teletext Pro is a native iOS app that displays the original web-based teletext content from ARD in a clean, fast web view - bringing the classic teletext experience to your device without any modifications to the source content.
+Mit Teletext Pro rufst du ARD-, ZDF- und WDR-Teletext direkt auf deinem iPhone auf. Die native iOS-App kombiniert eine schnelle WebView mit Retro-Bedienung und zeigt die Originalseiten unverändert an.
 
-## Features
+## Funktionen
 
-- **Browse all ARD Teletext pages** - Access pages 100 through 899, covering news, sports, weather, TV schedules, and more.
-- **Quick navigation** - Jump to any page by entering the number directly, or step through pages with previous/next controls.
-- **Authentic teletext look** - The classic teletext color scheme and monospaced typography, faithfully reproduced on your device.
-- **In-page links** - Tap on page references within teletext content to navigate instantly.
-- **Fast loading** - Pages load quickly over your internet connection with minimal data usage.
+- **Drei Sender in einer App** - Wechsle jederzeit zwischen ARD-, ZDF- und WDR-Teletext.
+- **Retro-Fernbedienung** - Gib Seitennummern schnell ein, springe zurück auf Seite 100 und navigiere wie beim klassischen TV-Teletext.
+- **Wisch-Navigation** - Wische links/rechts für vorherige und nächste Seite sowie hoch/runter für Unterseiten, wenn vorhanden.
+- **Shortcut-Tasten** - Speichere Lieblingsseiten per Long Press und rufe sie mit einem Tipp wieder auf.
+- **Authentische Darstellung** - Quellspezifisches Rendering sorgt für gut lesbare Seiten im jeweiligen Teletext-Stil.
+- **Für iPhone optimiert** - Entwickelt für die Nutzung im Hochformat.
 
-## About
+## Über die App
 
-Videotext (also known as Teletext) is the text-based information service that has accompanied German public television for decades. Teletext Pro makes it easy to access this service on your iPhone - whether you want to check the latest news headlines, look up sports scores, or browse TV listings.
+Videotext (auch Teletext genannt) ist ein textbasiertes Informationsangebot des öffentlich-rechtlichen Fernsehens in Deutschland. Mit Teletext Pro hast du Nachrichten, Sport, Wetter und TV-Programm direkt auf dem iPhone.
 
-Teletext Pro is a native web view wrapper that displays publicly available teletext content provided by ARD via their web-based teletext service at [ard-text.de](https://www.ard-text.de). All content displayed in the app is owned by and originates from ARD. Teletext Pro does not host, modify, or redistribute any of this content - it simply provides a convenient mobile interface for accessing it.
+Teletext Pro ist eine native WebView-App, die öffentlich verfügbare Teletext-Inhalte direkt von [ard-text.de](https://www.ard-text.de), [teletext.zdf.de](https://teletext.zdf.de) und [mobiltext.wdr.de](https://mobiltext.wdr.de) anzeigt. Alle Inhalte gehören den jeweiligen Rundfunkanstalten und stammen direkt von dort. Teletext Pro hostet, verändert oder verteilt diese Inhalte nicht.
 
-## Imprint
+## Impressum
 
-Teletext Pro is distributed by:
+Teletext Pro wird bereitgestellt von:
 
 Camarelle Ventures GmbH
 c/o Ast/Onward2
 Belforter Str. 9
 10405 Berlin
 
-Managing Director: Maximilian Ast
+Geschäftsführer: Maximilian Ast
 
-VAT-ID: DE343373975
+USt-IdNr.: DE343373975
 
-## Support
+## Kontakt
 
-For questions or feedback, reach out via [Twitter](https://x.com/maxast) or [GitHub](https://github.com/maxast).
+Bei Fragen oder Feedback erreichst du mich via [Twitter](https://x.com/maxast) oder [GitHub](https://github.com/maxast).

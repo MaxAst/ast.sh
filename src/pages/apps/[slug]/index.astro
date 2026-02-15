@@ -16,6 +16,9 @@ type Props = CollectionEntry<"apps">;
 
 const app = Astro.props;
 const { Content } = await render(app);
+const isTeletextPro = Astro.params.slug === "teletext-pro";
+const privacyLinkLabel = isTeletextPro ? "Datenschutz" : "Privacy Policy";
+const appStoreLinkLabel = isTeletextPro ? "Im App Store laden" : "Download on the App Store";
 ---
 
 <Layout
@@ -27,14 +30,14 @@ const { Content } = await render(app);
     <p class="mb-5 text-lg font-medium text-neutral-600">{app.data.description}</p>
     {app.data.appStoreUrl && (
       <p class="mb-5">
-        <a href={app.data.appStoreUrl} class="text-blue-700 underline">Download on the App Store</a>
+        <a href={app.data.appStoreUrl} class="text-blue-700 underline">{appStoreLinkLabel}</a>
       </p>
     )}
     <article>
       <Content />
     </article>
     <nav class="mt-8 text-sm text-neutral-500">
-      <a href={`/apps/${Astro.params.slug}/privacy`} class="hover:underline">Privacy Policy</a>
+      <a href={`/apps/${Astro.params.slug}/privacy`} class="hover:underline">{privacyLinkLabel}</a>
     </nav>
   </main>
 </Layout>

@@ -16,6 +16,9 @@ type Props = CollectionEntry<"apps">;
 
 const page = Astro.props;
 const { Content } = await render(page);
+const slug = Astro.params.slug ?? "";
+const appName = slug.replace(/-/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase());
+const backLabelPrefix = slug === "teletext-pro" ? "Zurück zu" : "Back to";
 ---
 
 <Layout
@@ -27,7 +30,7 @@ const { Content } = await render(page);
       <Content />
     </article>
     <nav class="mt-8 text-sm text-neutral-500">
-      <a href={`/apps/${Astro.params.slug}`} class="hover:underline">&larr; Back to {Astro.params.slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())}</a>
+      <a href={`/apps/${Astro.params.slug}`} class="hover:underline">&larr; {backLabelPrefix} {appName}</a>
     </nav>
   </main>
 </Layout>
