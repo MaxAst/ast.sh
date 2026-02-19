@@ -24,7 +24,7 @@ Diese Datenschutzerklärung erklärt, welche Daten in der App verarbeitet werden
 
 ## Was die App macht
 
-Teletext Pro ist eine native iOS-App, die öffentlich zugängliche Teletext-Inhalte von ARD, ZDF und WDR in einer WebView anzeigt. Die Inhalte stammen direkt von den jeweiligen Anbietern unter [ard-text.de](https://www.ard-text.de), [teletext.zdf.de](https://teletext.zdf.de) und [mobiltext.wdr.de](https://mobiltext.wdr.de). Die App hostet, verändert oder verteilt diese Inhalte nicht.
+Teletext Pro ist eine native App, die öffentlich zugängliche Teletext-Inhalte von in einer WebView anzeigt. Die Inhalte stammen direkt von den jeweiligen Anbietern. Die App hostet, verändert oder verteilt diese Inhalte nicht.
 
 ## Erhebung und Verarbeitung personenbezogener Daten
 
@@ -38,7 +38,7 @@ Teletext Pro erhebt, speichert oder übermittelt keine personenbezogenen Daten. 
 
 ## Netzwerkzugriffe
 
-Die App stellt Netzwerkverbindungen ausschließlich her, um öffentlich verfügbare Teletext-Seiten von ARD, ZDF und WDR zu laden. Diese Anfragen gehen direkt von deinem Gerät an die Server der jeweiligen Anbieter. Teletext Pro leitet die Anfragen nicht über eigene Server und protokolliert sie nicht.
+Die App stellt Netzwerkverbindungen ausschließlich her, um öffentlich verfügbare Teletext-Seiten zu laden. Diese Anfragen gehen direkt von deinem Gerät an die Server der jeweiligen Anbieter. Teletext Pro leitet die Anfragen nicht über eigene Server und protokolliert sie nicht.
 
 ## Drittanbieter
 
