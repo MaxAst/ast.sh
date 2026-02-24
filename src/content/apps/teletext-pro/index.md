@@ -39,4 +39,4 @@ USt-IdNr.: DE343373975
 
 ## Kontakt
 
-Bei Fragen oder Feedback erreichst du mich via [Twitter](https://x.com/maxast) oder [GitHub](https://github.com/maxast).
+Bei Fragen oder Feedback erreichst du mich via Email (max@ast.sh),  [Twitter](https://x.com/maxast) oder [GitHub](https://github.com/maxast).
