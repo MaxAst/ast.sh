@@ -1,29 +1,250 @@
 ---
-import About from "../components/home/About.astro";
-import Approach from "../components/home/Approach.astro";
-import Contact from "../components/home/Contact.astro";
-import Footer from "../components/home/Footer.astro";
-import Hero from "../components/home/Hero.astro";
-import Nav from "../components/home/Nav.astro";
-import Services from "../components/home/Services.astro";
-import Why from "../components/home/Why.astro";
-import Work from "../components/home/Work.astro";
+import { Image } from "astro:assets";
+import Checks from "../components/home/Checks.astro";
+import Field from "../components/home/Field.astro";
+import Logos from "../components/home/Logos.astro";
+import Wordmark from "../components/home/Wordmark.astro";
 import Layout from "../layouts/HomeLayout.astro";
+import { EMAIL, MAILTO, mailtoAbout } from "../lib/brand";
+import { offers } from "../lib/offers";
+import Portrait from "../photos/max-avatar.jpg";
+
+// The headline's last word rotates through these. The first is the one that
+// screen readers, no-JS and reduced-motion visitors get.
+const words = ["control", "sight", "hold", "command"];
+
+const method = [
+  {
+    title: "Decide what has to stay true.",
+    body: "Before an agent writes anything, we write down the rules: what the product must do, the edge cases, and what “correct” means in numbers. This is the part you read, and it stays yours.",
+  },
+  {
+    title: "Pick a shape you can hold in your head.",
+    body: "Architecture and stack are chosen so the system stays legible to you and easy for an agent to work in: few moving parts, clear boundaries, boring technology. You can draw the whole thing on a whiteboard.",
+  },
+  {
+    title: "Let checks do the reading.",
+    body: "Tests, types and deterministic checks stand where line-by-line review used to. Every change an agent makes has to pass them and leaves a trail you can replay. You look at behaviour and results, not at lines.",
+  },
+];
+
+const work = [
+  {
+    name: "Agentic coding",
+    client: "LIQID",
+    body: "Led the adoption of AI coding agents in the engineering team of a digital wealth manager.",
+  },
+  {
+    name: "Lending platform",
+    client: "Stryber",
+    body: "A fintech loan management system with KYC, AML and e-signature integrations, where every step has to be documented.",
+  },
+  {
+    name: "Web3 apps",
+    client: "Showtime",
+    body: "Consumer web3 products that generated more than $1M in revenue.",
+  },
+  {
+    name: "Release tooling",
+    client: "YNAP",
+    body: "An internal Kubernetes release tool that handled around 430 releases a month.",
+  },
+  {
+    name: "Expo Share Extension",
+    client: "Open source",
+    body: "An Expo config plugin for iOS share extensions with a custom view. 550+ stars on GitHub.",
+    href: "https://github.com/MaxAst/expo-share-extension",
+  },
+];
+
+const elsewhere = [
+  { href: "https://www.linkedin.com/in/maximilianast", label: "LinkedIn" },
+  { href: "https://github.com/maxast", label: "GitHub" },
+  { href: "https://x.com/maxi4st", label: "X" },
+];
 ---
 
 <Layout
-  title="Ast: correct software for regulated work"
-  description="Ast is Maximilian Ast's independent studio in Berlin. Coding agents, MCP servers and AI products for tax, finance and other regulated work. Fast to build, correct and auditable."
+  title="Ast: build products without reading the code"
+  description="Ast is Maximilian Ast's independent studio in Berlin. I help founders and engineering teams build products with AI agents writing the code, new or rewritten, without losing their grip on the system."
 >
-  <Nav />
-  <main id="top">
-    <Hero />
-    <Why />
-    <Approach />
-    <Services />
-    <Work />
-    <About />
-    <Contact />
+  <Field />
+
+  <main class="letter">
+    <section class="hero">
+      <a class="brand" href="#top" aria-label="Ast"><Wordmark class="wordmark" /></a>
+
+      <h1 class="statement">
+        <span class="line"><span>Stop reading the code.</span></span>
+        <span class="line"
+          ><span
+            >Keep <span class="cycle" aria-hidden="true"
+              >{words.map((word, i) => <em class:list={{ "is-on": i === 0 }}>{word}</em>)}</span
+            ><span class="sr">{words[0]}</span></span
+          ></span
+        >
+        <span class="line"><span>of the system.</span></span>
+      </h1>
+
+      <p class="lede">
+        Ast is my independent studio in Berlin. I help founders and engineering teams build
+        products with AI agents writing the code, new or rewritten, without losing their grip on
+        the system and its architecture.
+      </p>
+
+      <a class="card" href={MAILTO} data-tap>
+        <span>Still reading every line an agent writes?</span>
+        <span class="card-go">{EMAIL} <span class="arr" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </section>
+
+    <section class="prose">
+      <p>
+        AI writes code well, and it keeps getting better. Most teams still treat it like a junior
+        developer: let it type, then read every line it produced. That keeps the pace of the old
+        way and adds the cost of the new one.
+      </p>
+      <p>
+        There is another way to work. You stop reading the code and put your attention where it
+        counts: what the system has to do, how it is put together, and how you would know if it
+        were wrong. The agent owns the lines. You own the system.
+      </p>
+      <p>
+        This is not vibe coding. Vibe coding gives up the understanding along with the code, and
+        what you get is slop. Here you give up the lines and keep everything else: the
+        architecture is yours, the rules are written down, and every change has to pass checks you
+        trust.
+      </p>
+      <p>
+        I did this with my own product. TaxMaxi began as a TypeScript monorepo. I rebuilt it from
+        scratch in Go and htmx with agents writing the code, and I stopped reading it. It produces
+        German tax reports, where every figure has to add up to the cent.
+      </p>
+      <p>
+        In my experience, a codebase that agents started is far easier for agents to keep working
+        on than one that people wrote. So starting again is often the faster way forward, and
+        rewrites are easier than you&rsquo;d think. <em>I help you make that move.</em>
+      </p>
+    </section>
+
+    <section id="approach">
+      <h2 class="kicker">How I work</h2>
+      <p class="statement statement-2">Rules first. <em>Then</em> speed.</p>
+      <ol class="steps">
+        {
+          method.map(({ title, body }, i) => (
+            <li>
+              <span class="n">{i + 1}</span>
+              <div>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section id="offers">
+      <h2 class="kicker">Ways to work together</h2>
+      <ul class="rows offers">
+        {
+          offers.map(({ name, note, body }) => (
+            <li>
+              <h3>
+                <a href={mailtoAbout(name)} data-offer={name}>
+                  {name}
+                  <span class="arr" aria-hidden="true">&rarr;</span>
+                </a>
+              </h3>
+              <p class="price" data-offer-note>{note}</p>
+              <p class="row-body">{body}</p>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="aside">I do the work myself. The week on your system is the easiest place to start.</p>
+    </section>
+
+    <section id="work">
+      <h2 class="kicker">I have built with</h2>
+      <Logos />
+      <ul class="rows work">
+        {
+          work.map(({ name, client, body, href }) => (
+            <li>
+              <h3>
+                {href ? (
+                  <a href={href}>
+                    {name}
+                    <span class="arr" aria-hidden="true">&nearr;</span>
+                  </a>
+                ) : (
+                  name
+                )}
+              </h3>
+              <p class="price">{client}</p>
+              <p class="row-body">{body}</p>
+            </li>
+          ))
+        }
+      </ul>
+      <p>
+        <a class="link" href="https://taxmaxi.com">TaxMaxi</a> is live, and it ships with an AI
+        agent, a public API and an MCP server.
+      </p>
+    </section>
+
+    <section id="about">
+      <h2 class="kicker">Who I am</h2>
+      <div class="person">
+        <Image
+          class="person-photo"
+          src={Portrait}
+          alt="Maximilian Ast holding his dog"
+          widths={[96, 192, 288]}
+          sizes="96px"
+          quality={75}
+        />
+        <div>
+          <h3>Maximilian Ast</h3>
+          <p>
+            Senior engineer and tech lead for about ten years, most of it freelance, in TypeScript
+            and Go, across fintech, e-commerce, web3 and consumer apps.
+          </p>
+        </div>
+      </div>
+      <p>
+        I like software that has an opinion and is a joy to use. Less is more, pragmatism beats
+        ceremony, and you always know where a project stands. If something is a bad idea,
+        I&rsquo;ll tell you before we build it.
+      </p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="kicker">Ready to stop reading the code?</h2>
+      <p>
+        Tell me what you are building, or what you would rebuild if you dared. I&rsquo;ll tell you
+        honestly whether this way of working fits.
+      </p>
+      <p class="mail">
+        <a class="statement mail-link" href={MAILTO}>{EMAIL}</a>
+        <button class="copy" type="button" data-copy={EMAIL} data-tap>
+          <span class="copy-idle">Copy</span>
+          <span class="copy-done" aria-hidden="true">Copied</span>
+        </button>
+        <span class="sr" role="status" data-copy-status></span>
+      </p>
+    </section>
+
+    <footer class="colophon">
+      <Checks />
+      <p class="colophon-line">
+        <span>&copy; {new Date().getFullYear()} Ast &middot; Maximilian Ast, Berlin</span>
+        <span class="colophon-links">
+          {elsewhere.map(({ href, label }) => <a href={href}>{label}</a>)}
+        </span>
+      </p>
+    </footer>
   </main>
-  <Footer />
 </Layout>

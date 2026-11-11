@@ -1,0 +1,21 @@
+---
+import { offers } from "../../lib/offers";
+
+// What the page promises about itself. The script in src/scripts/checks.ts runs
+// these in the visitor's browser and fills in the results; nothing here is canned.
+const expected = JSON.stringify(offers.map(({ name, note }) => ({ name, note })));
+---
+
+<details class="checks" data-checks data-expected={expected} data-dev={import.meta.env.DEV ? "" : undefined}>
+  <summary data-tap>
+    <span class="checks-mark" aria-hidden="true"></span>
+    <span data-checks-summary>This page checks itself in your browser.</span>
+    <span class="checks-toggle" aria-hidden="true"></span>
+  </summary>
+  <ul class="checks-list" data-checks-list></ul>
+  <p class="checks-note">
+    Run just now, on your device. This is the idea in small: the rules are written down and
+    something checks them, so nobody has to read every line.
+  </p>
+  <noscript><p class="checks-note">The checks need JavaScript to run.</p></noscript>
+</details>

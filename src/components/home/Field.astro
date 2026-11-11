@@ -1,0 +1,13 @@
+---
+import { MARK_PATH } from "../../lib/brand";
+---
+
+<!-- The one image on the page: the "A" as a halftone print that drifts, answers the
+     pointer and darkens as the letter is read. The script draws it into the canvas;
+     the SVG underneath is what shows without WebGL or JavaScript. -->
+<div class="field" aria-hidden="true">
+  <svg class="field-fallback" viewBox="80 40 350 400" preserveAspectRatio="xMidYMid meet"
+    ><path d={MARK_PATH}></path></svg
+  >
+  <canvas class="field-canvas" data-field data-mark={MARK_PATH}></canvas>
+</div>

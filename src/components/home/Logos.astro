@@ -20,17 +20,12 @@ const logos = [
 ];
 ---
 
-<div class="logos">
-  <div class="shell logos-inner">
-    <p class="logos-label">Previously built with</p>
-    <ul class="logos-list">
-      {
-        logos.map(({ Logo, label, height }) => (
-          <li>
-            <Logo class="logo" role="img" aria-label={label} style={`--h:${height}`} />
-          </li>
-        ))
-      }
-    </ul>
-  </div>
-</div>
+<ul class="logos" aria-label="Companies I have built with">
+  {
+    logos.map(({ Logo, label, height }) => (
+      <li>
+        <Logo class="logo" role="img" aria-label={label} style={`--h:${height}`} />
+      </li>
+    ))
+  }
+</ul>

@@ -8,3 +8,10 @@ export const WORDMARK_PATH =
 /** The "A" mark, drawn on a 512 x 512 canvas. */
 export const MARK_PATH =
   "M198.75 377.5C168.25 377.5 147.417 377.25 136.25 376.75L129 394C126.833 398.833 124.833 403.917 123 409.25C119.167 419.583 113.833 424.75 107 424.75C103.833 424.75 101.25 423.75 99.25 421.75C97.25 419.75 96.25 417.667 96.25 415.5C96.25 411.833 97.8333 407.75 101 403.25C106 396.25 110.917 387.083 115.75 375.75C101.417 374.417 94.25 370.25 94.25 363.25C94.25 356.25 98.3333 352.75 106.5 352.75C111.5 352.75 117.333 353.583 124 355.25L248.75 52.25L419.75 422H289.5L268.75 377.5H198.75ZM144.25 357.25C160.25 358.583 174.583 359.25 187.25 359.25H260.5L198 224.5L144.25 357.25Z";
+
+/** The one call to action on the homepage. */
+export const EMAIL = "max@ast.sh";
+export const MAILTO = `mailto:${EMAIL}`;
+
+/** A mailto link with the subject filled in, so an enquiry arrives already sorted. */
+export const mailtoAbout = (subject: string) => `${MAILTO}?subject=${encodeURIComponent(subject)}`;

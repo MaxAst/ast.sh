@@ -44,58 +44,23 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
 
-    <!-- Marks the document as scripted before first paint, so the reveal styles apply without a flash. -->
+    <!-- Runs before first paint. `js` arms the entrance styles; `seen` skips the
+         intro when it has already played in this session. -->
     <script is:inline>
-      document.documentElement.classList.add("js");
+      (function (root) {
+        root.classList.add("js");
+        try {
+          if (sessionStorage.getItem("ast:intro")) root.classList.add("seen");
+          else sessionStorage.setItem("ast:intro", "1");
+        } catch (e) {}
+      })(document.documentElement);
     </script>
   </head>
   <body>
     <slot />
 
     <script>
-      // Small progressive enhancements (reveal, word cycle). The page works without JS.
-      const root = document.documentElement;
-      const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-      requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add("ready")));
-
-      const els = document.querySelectorAll<HTMLElement>("[data-reveal]");
-      if ("IntersectionObserver" in window && !reduce) {
-        const io = new IntersectionObserver(
-          (entries) => {
-            for (const entry of entries) {
-              if (!entry.isIntersecting) continue;
-              const target = entry.target as HTMLElement;
-              const siblings = [...(target.parentElement?.children ?? [])].filter((c) =>
-                c.hasAttribute("data-reveal")
-              );
-              target.style.setProperty("--d", `${Math.min(siblings.indexOf(target), 5) * 80}ms`);
-              target.classList.add("in");
-              io.unobserve(target);
-            }
-          },
-          { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
-        );
-        for (const el of els) io.observe(el);
-      } else {
-        for (const el of els) el.classList.add("in");
-      }
-
-      const cycle = document.querySelector(".cycle");
-      if (cycle && !reduce) {
-        const words = [...cycle.children];
-        let i = 0;
-        setInterval(() => {
-          const current = words[i];
-          i = (i + 1) % words.length;
-          const next = words[i];
-          if (!current || !next) return;
-          current.classList.remove("is-on");
-          current.classList.add("is-off");
-          next.classList.remove("is-off");
-          next.classList.add("is-on");
-          setTimeout(() => current.classList.remove("is-off"), 800);
-        }, 2600);
-      }
+      import "../scripts/home.ts";
     </script>
   </body>
 </html>
