@@ -1,0 +1,29 @@
+---
+import About from "../components/home/About.astro";
+import Approach from "../components/home/Approach.astro";
+import Contact from "../components/home/Contact.astro";
+import Footer from "../components/home/Footer.astro";
+import Hero from "../components/home/Hero.astro";
+import Nav from "../components/home/Nav.astro";
+import Services from "../components/home/Services.astro";
+import Why from "../components/home/Why.astro";
+import Work from "../components/home/Work.astro";
+import Layout from "../layouts/HomeLayout.astro";
+---
+
+<Layout
+  title="Ast: correct software for regulated work"
+  description="Ast is Maximilian Ast's independent studio in Berlin. Coding agents, MCP servers and AI products for tax, finance and other regulated work. Fast to build, correct and auditable."
+>
+  <Nav />
+  <main id="top">
+    <Hero />
+    <Why />
+    <Approach />
+    <Services />
+    <Work />
+    <About />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,13 @@
+---
+import { WORDMARK_PATH, WORDMARK_VIEWBOX } from "../../lib/brand";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<svg class={className} viewBox={WORDMARK_VIEWBOX} aria-hidden="true"
+  ><path d={WORDMARK_PATH} fill="currentColor"></path></svg
+>

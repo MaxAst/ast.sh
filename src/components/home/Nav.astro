@@ -1,0 +1,18 @@
+---
+import Wordmark from "./Wordmark.astro";
+
+const links = [
+  { href: "#approach", label: "Approach" },
+  { href: "#services", label: "Services" },
+  { href: "#work", label: "Work" },
+  { href: "#about", label: "About" },
+];
+---
+
+<header class="nav">
+  <a href="#top" class="nav-brand" aria-label="Ast, home"><Wordmark class="wordmark" /></a>
+  <nav aria-label="Primary">
+    {links.map(({ href, label }) => <a href={href}>{label}</a>)}
+    <a href="#contact" class="nav-cta">Get in touch</a>
+  </nav>
+</header>

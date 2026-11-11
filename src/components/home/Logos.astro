@@ -1,0 +1,36 @@
+---
+import Liqid from "../../logos/home/liqid.svg";
+import Merantix from "../../logos/home/merantix.svg";
+import Moia from "../../logos/home/moia.svg";
+import Otrium from "../../logos/home/otrium.svg";
+import Showtime from "../../logos/home/showtime.svg";
+import Stryber from "../../logos/home/stryber.svg";
+import Ynap from "../../logos/home/ynap.svg";
+
+// `height` is the optical height in px; the CSS scales it down on small screens.
+// The SVGs are inlined so the CSS can force them to a single neutral colour.
+const logos = [
+  { Logo: Liqid, label: "LIQID", height: 28.1 },
+  { Logo: Showtime, label: "Showtime", height: 21.7 },
+  { Logo: Stryber, label: "Stryber", height: 25 },
+  { Logo: Moia, label: "MOIA", height: 21.1 },
+  { Logo: Ynap, label: "YOOX Net-a-Porter Group", height: 39.2 },
+  { Logo: Otrium, label: "Otrium", height: 25.2 },
+  { Logo: Merantix, label: "Merantix", height: 16.1 },
+];
+---
+
+<div class="logos">
+  <div class="shell logos-inner">
+    <p class="logos-label">Previously built with</p>
+    <ul class="logos-list">
+      {
+        logos.map(({ Logo, label, height }) => (
+          <li>
+            <Logo class="logo" role="img" aria-label={label} style={`--h:${height}`} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
