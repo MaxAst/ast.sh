@@ -14,16 +14,16 @@ export const offers: Offer[] = [
   {
     name: "A week on your system",
     note: "one week",
-    body: "A week with your team and your codebase. You get a written answer to three questions: what to keep, what to rebuild, and what has to be true before you stop reading the code.",
+    body: "A week with your team and your codebase. You get a written report: what to keep, what to rebuild, where the security holes are, and what it would take for your team to stop reviewing every line.",
   },
   {
     name: "New product",
     note: "from the first commit",
-    body: "We set the product up together: the rules, the architecture, the stack and the checks. Then we build the first slice with agents writing the code, and you carry on without me.",
+    body: "We pick the stack and set up the tests and a sandbox for the agents. Then we build the first feature end to end with agents writing the code, and you carry on without me.",
   },
   {
     name: "Rewrite",
     note: "one service, or all of it",
-    body: "We rebuild what you have so that agents can own the code, checked against how the old system behaves. Rewrites are easier than you'd think.",
+    body: "We record what the old system does, and the new one has to reproduce it before it goes live. My own took four weeks.",
   },
 ];

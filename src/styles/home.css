@@ -1,7 +1,7 @@
 /* Ast homepage (/v2). Loaded only by HomeLayout.astro.
 
    The page is a letter: one column, two type sizes, one image.
-   Type: Source Serif Pro for the three statements and for emphasis,
+   Type: Source Serif Pro for the two statements and for emphasis,
    Helvetica Neue for everything else. Motion lives in src/scripts. */
 
 @font-face { font-family: "Source Serif Pro"; src: url("/fonts/source-serif-pro/SourceSerifPro-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
@@ -21,7 +21,9 @@
   /* Two sizes. Both grow a little on very wide screens so the letter keeps its
      weight against the image; the column is set in ems so it grows with them. */
   --text: clamp(20px, 1.06vw, 24px);                                 /* the letter */
-  --statement: max(clamp(40px, 4.5vw, 66px), 3.3 * var(--text));     /* the three serif lines */
+  /* The serif lines. The headline's longest line is about 9.1em wide and
+     must not wrap, so the size is capped at what fits a 46vw column. */
+  --statement: min(max(clamp(40px, 4.5vw, 66px), 3.3 * var(--text)), 5vw);
   --small: 13px;                              /* colophon only */
 
   --pad: clamp(22px, 4.4vw, 64px);
@@ -73,7 +75,7 @@ em { font-family: var(--serif); font-style: italic; font-size: 1.07em; letter-sp
 h3 { font-weight: 500; }
 .link { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; text-decoration-color: var(--muted); transition: text-decoration-color 150ms ease; }
 
-/* The three serif lines: the headline, the principle, the address. */
+/* The serif lines: the headline and the address. */
 .statement, .letter p.statement { font-family: var(--serif); font-size: var(--statement); line-height: 1.04; letter-spacing: -0.036em; text-wrap: nowrap; }
 .statement em { font-size: 1em; letter-spacing: inherit; }
 
@@ -95,14 +97,6 @@ h3 { font-weight: 500; }
 .card { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 20px; min-height: 60px; padding: 14px 20px; border-radius: 14px; box-shadow: inset 0 0 0 1px var(--rule); font-size: 18px; transition: box-shadow 150ms ease; }
 .card > span:first-child { color: var(--ink-2); }
 .card-go { font-weight: 500; white-space: nowrap; }
-
-/* ---------- How I work ---------- */
-.statement-2 { margin: 6px 0 40px -0.035em; }
-.statement-2 em { color: var(--muted); }
-.steps li { display: grid; grid-template-columns: 1.6em minmax(0, 1fr); }
-.steps li + li { margin-top: 22px; }
-.steps .n { color: var(--muted); font-variant-numeric: tabular-nums; }
-.steps p { margin-top: 2px; color: var(--ink-2); }
 
 /* ---------- Rows: offers and work ---------- */
 .rows li { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 20px; padding: 17px 0 18px; border-top: 1px solid var(--rule); }

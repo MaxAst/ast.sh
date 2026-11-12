@@ -13,21 +13,6 @@ import Portrait from "../photos/max-avatar.jpg";
 // screen readers, no-JS and reduced-motion visitors get.
 const words = ["control", "sight", "hold", "command"];
 
-const method = [
-  {
-    title: "Decide what has to stay true.",
-    body: "Before an agent writes anything, we write down the rules: what the product must do, the edge cases, and what “correct” means in numbers. This is the part you read, and it stays yours.",
-  },
-  {
-    title: "Pick a shape you can hold in your head.",
-    body: "Architecture and stack are chosen so the system stays legible to you and easy for an agent to work in: few moving parts, clear boundaries, boring technology. You can draw the whole thing on a whiteboard.",
-  },
-  {
-    title: "Let checks do the reading.",
-    body: "Tests, types and deterministic checks stand where line-by-line review used to. Every change an agent makes has to pass them and leaves a trail you can replay. You look at behaviour and results, not at lines.",
-  },
-];
-
 const work = [
   {
     name: "Agentic coding",
@@ -65,8 +50,8 @@ const elsewhere = [
 ---
 
 <Layout
-  title="Ast: build products without reading the code"
-  description="Ast is Maximilian Ast's independent studio in Berlin. I help founders and engineering teams build products with AI agents writing the code, new or rewritten, without losing their grip on the system."
+  title="Ast: Maximilian Ast's software studio in Berlin"
+  description="Ast is Maximilian Ast's independent studio in Berlin. I help founders and engineering teams build products with AI agents writing the code, and keep them reliable and secure without a person reviewing every line."
 >
   <Field />
 
@@ -88,8 +73,8 @@ const elsewhere = [
 
       <p class="lede">
         Ast is my independent studio in Berlin. I help founders and engineering teams build
-        products with AI agents writing the code, new or rewritten, without losing their grip on
-        the system and its architecture.
+        products with AI agents writing the code, and keep them reliable and secure without a
+        person reviewing every line.
       </p>
 
       <a class="card" href={MAILTO} data-tap>
@@ -100,49 +85,33 @@ const elsewhere = [
 
     <section class="prose">
       <p>
-        AI writes code well, and it keeps getting better. Most teams still treat it like a junior
-        developer: let it type, then read every line it produced. That keeps the pace of the old
-        way and adds the cost of the new one.
+        Code review used to be how a team kept control of its software. Someone read every change
+        before it shipped, and that was where the bugs, the bad design and the security holes got
+        caught.
       </p>
       <p>
-        There is another way to work. You stop reading the code and put your attention where it
-        counts: what the system has to do, how it is put together, and how you would know if it
-        were wrong. The agent owns the lines. You own the system.
+        Agents write more code in a day than a team can read in a week. Review either becomes the
+        bottleneck or shrinks to a skim and an approval. The first throws away the speed you are
+        paying for, and the second ships code nobody has checked.
       </p>
       <p>
-        This is not vibe coding. Vibe coding gives up the understanding along with the code, and
-        what you get is slop. Here you give up the lines and keep everything else: the
-        architecture is yours, the rules are written down, and every change has to pass checks you
-        trust.
+        So the control has to move to where it doesn&rsquo;t depend on a person reading. People
+        decide how the system is put together and what it must never do. Tests run on every change
+        and block it when the product stops doing what it should, or starts letting the wrong
+        person in. The agents write the code inside that, with no production keys.
       </p>
       <p>
-        I did this with my own product. TaxMaxi began as a TypeScript monorepo. I rebuilt it from
-        scratch in Go and htmx with agents writing the code, and I stopped reading it. It produces
-        German tax reports, where every figure has to add up to the cent.
+        I rebuilt my own product, <a class="link" href="https://taxmaxi.com">TaxMaxi</a>, this
+        way. It is live with customers, and it produces tax reports where a figure that is a cent
+        off is a bug. Agents wrote 97 percent of the commits, 1,600 tests run on every change, and
+        it shipped four weeks after the first commit.
       </p>
       <p>
-        In my experience, a codebase that agents started is far easier for agents to keep working
-        on than one that people wrote. So starting again is often the faster way forward, and
-        rewrites are easier than you&rsquo;d think. <em>I help you make that move.</em>
+        The agents had the old version to work from, which is why rewrites are easier than
+        you&rsquo;d think. A codebase that agents started is also, in my experience, far easier
+        for agents to keep working on than one that people wrote.
+        <em>I help you make that move.</em>
       </p>
-    </section>
-
-    <section id="approach">
-      <h2 class="kicker">How I work</h2>
-      <p class="statement statement-2">Rules first. <em>Then</em> speed.</p>
-      <ol class="steps">
-        {
-          method.map(({ title, body }, i) => (
-            <li>
-              <span class="n">{i + 1}</span>
-              <div>
-                <h3>{title}</h3>
-                <p>{body}</p>
-              </div>
-            </li>
-          ))
-        }
-      </ol>
     </section>
 
     <section id="offers">
@@ -215,8 +184,8 @@ const elsewhere = [
         </div>
       </div>
       <p>
-        I like software that has an opinion and is a joy to use. Less is more, pragmatism beats
-        ceremony, and you always know where a project stands. If something is a bad idea,
+        I like software that has an opinion and is a joy to use. I keep things small and
+        pragmatic, and you always know where a project stands. If something is a bad idea,
         I&rsquo;ll tell you before we build it.
       </p>
     </section>
