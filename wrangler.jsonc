@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ast-sh",
+  "compatibility_date": "2026-11-01",
+  // Static site: no Worker script, Cloudflare serves the Astro build output directly.
+  "assets": {
+    "directory": "./dist"
+  },
+  "routes": [{ "pattern": "www.ast.sh", "custom_domain": true }],
+  // Serve only from www.ast.sh, not from the *.workers.dev address.
+  "workers_dev": false,
+  "preview_urls": false
+}
